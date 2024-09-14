@@ -3,13 +3,15 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import Footer from "./Footer";
 import AnimatedTitle from "./AnimatedTitle";
 import GalleryPreview from "./GalleryPreview";
-
+import GalleryNews from "./GalleryNews";
+import ComplexGallery from "./ComplexGallery ";
+import AuthorSignature from "./AuthorSignature ";
 export default function Home() {
   return (
     <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
       <section className="h-screen w-full snap-start flex flex-col items-center justify-between p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <ThemeSwitcher className="self-end" />
-        
+
         <main className="flex flex-col gap-8 items-center sm:items-center">
           <Image
             className="dark:invert"
@@ -32,6 +34,18 @@ export default function Home() {
       <section className="w-full snap-start overflow-y-auto">
         <GalleryPreview />
       </section>
+      <section className="w-full snap-start overflow-y-auto">
+        <GalleryNews />
+      </section>
+
+      <section className="w-full snap-start overflow-y-auto">
+        <ComplexGallery />
+      </section>
+
+      <section className="w-full snap-start overflow-y-auto">
+        <AuthorSignature />
+      </section>
+
 
       <section className="fixed bottom-4 left-0 right-0">
         <Footer />
