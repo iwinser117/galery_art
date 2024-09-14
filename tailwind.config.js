@@ -10,7 +10,25 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      }, 
+      animation: {
+        'fade-in': 'fadeIn 1s ease-out forwards',
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        scrollSnapType: {
+          y: 'y',
+          mandatory: 'mandatory',
+        },
+      },
+    },
+  },
+  variants: {
+    extend: {
+      scrollSnapType: ['responsive'],
     },
   },
   plugins: [],

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 export default function ThemeSwitcher() {
-  const [theme, setTheme] = useState(null);
+  const [theme, setTheme] = useState('dark');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -34,10 +34,6 @@ export default function ThemeSwitcher() {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
   };
-
-  if (!isVisible) {
-    return null;
-  }
 
   const buttonText = theme === 'light' ? 'Modo oscuro' : 'Modo claro';
 
